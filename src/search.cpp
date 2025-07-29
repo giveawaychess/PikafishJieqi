@@ -1687,7 +1687,7 @@ Value Search::Worker::flip_search(
         if (isQsearch)
             value = qsearch<nodeType>(pos, ss, alpha, beta);
         else
-            value = search<nodeType>(pos, ss, alpha, beta, depth - restPieces.size() + 1, cutNode);
+            value = search<nodeType>(pos, ss, alpha, beta, depth, cutNode);
 
         pos.undo_flip((ss - 1)->currentMove.to_sq(), piece);
 
